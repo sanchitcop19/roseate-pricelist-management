@@ -7,7 +7,7 @@ let window = null
 // Wait until the app is ready
 app.once('ready', () => {
   // Create a new window
-
+  
   window = new BrowserWindow({
     // Set the initial width to 500px
     //width: 500,

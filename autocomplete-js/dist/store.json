@@ -11,5 +11,13 @@
     "prices": {
       "Siemens": 1000
     }
+  },
+  {
+    "spec": "ACB 300A",
+    "prices": {
+      "Siemens": 980,
+      "L&T": 500,
+      "ABB": 1250
+    }
   }
 ]

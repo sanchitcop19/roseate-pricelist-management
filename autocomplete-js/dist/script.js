@@ -1,7 +1,15 @@
+const {readFile, readFileSync} = require('fs')
+const {join} = require('path')
+
 // autoComplete.js on typing event emitter
 document.querySelector("#autoComplete").addEventListener("autoComplete", event => {
 	console.log(event);
 });
+
+
+
+const source = readFileSync(join(__dirname, 'store.json'));
+const data = JSON.parse(source);
 // The autoComplete.js Engine instance creator
 const autoCompletejs = new autoComplete({
 	data: {
@@ -11,11 +19,16 @@ const autoCompletejs = new autoComplete({
 				.querySelector("#autoComplete")
 				.setAttribute("placeholder", "Loading...");
 			// Fetch External Data Source
-			const source = await fetch(
-				"http://localhost:8080/store.json",
-
-			);
-			const data = await source.json();
+			/*
+			readFile(join(__dirname, 'store.json'), (err, data) => {
+				if (err){
+					throw err;
+				}
+				console.log(JSON.parse(data));
+			})*/
+			//source = readFile(join(__dirname, 'store.json'), (err, data) => {});
+		
+			//data = await source.json();
 			// Post loading placeholder text
 			document
 				.querySelector("#autoComplete")
@@ -108,7 +121,6 @@ document.querySelector(".toggeler").addEventListener("click", function() {
 
 // Toggle results list and other elements
 const action = function(action) {
-  const github = document.querySelector(".github-corner");
   const title = document.querySelector("h1");
   const mode = document.querySelector(".mode");
   const selection = document.querySelector(".selection");
