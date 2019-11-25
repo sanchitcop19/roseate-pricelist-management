@@ -1,0 +1,14 @@
+{
+  "name": "res-pricelist",
+  "version": "1.0.0",
+  "description": "Price List Management for Roseate Engineering Services",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Sanchit Batra",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^7.1.2"
+  }
+}
