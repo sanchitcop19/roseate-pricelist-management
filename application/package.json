@@ -9,6 +9,6 @@
   "author": "Sanchit Batra",
   "license": "MIT",
   "dependencies": {
-    "electron": "^7.1.2"
+    "electron": "^9.4.0"
   }
 }
